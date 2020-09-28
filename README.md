@@ -2,7 +2,43 @@
 Shell Script which downloads and installs the Splunk Enterprise modules on Linux host.
 
 # Functionality of Script
-Based on the WGET command line URL which Splunk provides , the script downloads the Splunk Enterprise package and does the installation
+Based on the WGET command line URL which Splunk provides , the script downloads the Splunk Enterprise package and does the installation.
+
+
+## Installation Includes
+
+> Untarring the Splunk enterprise package.
+> Installing the Splunk enterpise package accepting license.
+> Enabling the boot-start .
+
+### Untarring the Splunk enterprise package
+```
+tar -xzf <tar_file_name> -C /opt 
+
+/opt :- Untars the file in mentioned directory.
+
+```
+
+### Installing the Splunk enterpise package accepting license.
+
+```
+splunk start --accept-license --answer-yes --no-prompt --gen-and-print-passwd
+
+> Generate a random password and print the random password immediately
+
+Help URL :- https://docs.splunk.com/Documentation/Splunk/8.0.6/Security/Secureyouradminaccount
+
+```
+
+### Enabling the boot-start .
+
+```
+splunk enable boot-start -user root
+
+```
+
+
+
 
 # Install WGET on Linux 
 yum install wget 
