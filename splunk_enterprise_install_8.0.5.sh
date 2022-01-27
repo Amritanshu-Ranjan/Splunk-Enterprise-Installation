@@ -40,7 +40,7 @@ if [ "$OPERATING_SYSTEM" == "Linux" ]; then
 
   tar -xzf $LINUX_INSTALL_FILE -C /opt >~/output.txt
 
-  chown -R root.root /opt/splunk/
+  # chown -R splunk.splunk /opt/splunk/
 
   $(/opt/splunk/bin/splunk start --accept-license --answer-yes --no-prompt --gen-and-print-passwd >~/output.txt)
 
@@ -52,7 +52,7 @@ if [ "$OPERATING_SYSTEM" == "Linux" ]; then
     echo ""
   fi
 
-  $(/opt/splunk/bin/splunk enable boot-start -user root >~/output.txt)
+  $(/opt/splunk/bin/splunk enable boot-start -user splunk >~/output.txt)
 
   BOOT_START=$(cat ~/output.txt | grep -i "Init script is configured to run at boot." | grep -o "Init script is configured to run at boot.")
 
