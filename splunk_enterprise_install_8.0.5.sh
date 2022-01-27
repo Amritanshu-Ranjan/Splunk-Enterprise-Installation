@@ -32,9 +32,9 @@ echo ""
 
 if [ "$OPERATING_SYSTEM" == "Linux" ]; then
   ##Linux :-
-  LINUX_WGET_CMD=$(wget -O splunk-8.0.5-a1a6394cc5ae-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.0.5&product=splunk&filename=splunk-8.0.5-a1a6394cc5ae-Linux-x86_64.tgz&wget=true')
+  LINUX_WGET_CMD=$(wget -O splunk-8.2.4-87e2dda940d1-Linux-x86_64.tgz 'https://download.splunk.com/products/splunk/releases/8.2.4/linux/splunk-8.2.4-87e2dda940d1-Linux-x86_64.tgz')
 
-  LINUX_INSTALL_FILE="splunk-8.0.5-a1a6394cc5ae-Linux-x86_64.tgz"
+  LINUX_INSTALL_FILE="splunk-8.2.4-87e2dda940d1-Linux-x86_64.tgz"
 
   echo ""
 
