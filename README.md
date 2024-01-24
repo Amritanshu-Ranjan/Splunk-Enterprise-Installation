@@ -1,9 +1,8 @@
 # Splunk-Enterprise-Installation
-Shell Script which downloads and installs the Splunk Enterprise modules on Linux host.
+A Shell Script designed to download and install Splunk Enterprise modules on a Linux host.
 
 # Functionality of Script
-Based on the WGET command line URL which Splunk provides , the script downloads the Splunk Enterprise package and does the installation.
-
+Using the provided WGET command line URL from Splunk, the script fetches the Splunk Enterprise package and proceeds with the installation.
 
 ## Installation Includes
 
@@ -38,11 +37,9 @@ splunk enable boot-start -user root
 ```
 
 
-
-
 # Install WGET on Linux 
 yum install wget 
 
 # UserName and Password 
-Custom User name and password is flashed at the end which you can use to login , it can be changed in future reason for generating a common password is you can run the script on one go across all the servers and will have a common credentials across all the Splunk Components.
+At the conclusion of the process, a unique username and password are displayed for your login. Although these credentials can be modified later, the advantage of generating a standardized password is that you can execute the script seamlessly across all servers, ensuring consistent access credentials for all Splunk Components.
 
